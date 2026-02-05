@@ -128,7 +128,7 @@ http.createServer((req, res) => {
 
       countries.forEach((country) => {
         if (country.continent === continentName) {
-          res.write(`<pre>${country.name}</pre>`);
+          res.write(`<pre><a href="/${normalizedString(country.name)}">${country.name}</a></pre>`);
         }
       });
     } else if (countryObject) {
